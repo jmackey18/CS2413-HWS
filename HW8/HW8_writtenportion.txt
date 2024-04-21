@@ -1,0 +1,45 @@
+Jhan Paul Mackey
+CS 2413 - 001
+Apr. 20, 2024
+HW8 - written portion (and extra credit)
+
+Written Portion:
+
+1) The two most time-consuming part of my algorithm will be populating and printing (and formatting) 
+    the unordered_map. To fill the unordered_map, I have to first traverse through each submission line in 
+    the Assignments file, which is n total lines. Afterwards, I have to traverse through each 
+    submitted assignment mapped to the student's name. In this case, I have, at most, C unique submissions, 
+    where C is the large constant. A similar process occurs when printing the unordered_map.
+
+    Assuming we have a large constant of student names, the runtime of my algorithm would be O(n).
+
+2) Should the students and submitted assignments be sorted, the runtime may be a little larger. When populating 
+    the list of students' names, I have to traverse through each line in the Names file and append such to the vector 
+    of strings; there would be n lines to traverse. When populating the number of submitted assignments, I have to do the 
+    same process mentioned in the previous answer. However, when (or after) appending another unique submission, I would have 
+    to sort the list of, at most, C submissions, where C is the large constant.
+
+    Assuming we have a large constant of student names and a sorting method of O(C), or O(1) compared to n total submission lines, the sorting 
+    runtime of my algorithm would still be O(n).
+
+3) If we want an unsorted list of students' names and submissions, the only thing that I would change is the 
+    method of outputting the unordered_map. Nonetheless, the algorithm still requires traversals of, at most, n
+    elements/lines.
+
+    Assuming we have a large constant of student names, the unsorted runtime of my algorithm would be O(n).
+
+
+Extra Credit:
+
+1) My algorithm was described in the original question. We would still traverse, at most, m total unique submissions. Therefore, 
+    assuming we have a total of m amount of assignments, the runtime would be O(m*n).
+
+2) My algorithm was described in the original question. We traverse through n total submission lines, then traverse through 
+    each element in a student's vector, then (during or after) sort such vector. 
+    
+    Assuming we have a total of m unique assignments and a sorting method of O(m), the runtime would be O(m^2*n), \
+    or O(m^2).
+
+3) My algorithm was described in the original question. However, assuming we have a total of m amount of assignments, 
+the runtime would be O(m*n).
+
